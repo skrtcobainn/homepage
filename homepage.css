@@ -1,6 +1,7 @@
 body {
   padding-top: 200px;
   background-image: url(https://w.wallhaven.cc/full/4g/wallhaven-4grp97.jpg);
+  background-repeat: no-repeat;
 }
 
 .header h1 {
