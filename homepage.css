@@ -1,7 +1,7 @@
 body {
   padding-top: 200px;
-  background-image: url(https://w.wallhaven.cc/full/4g/wallhaven-4grp97.jpg);
-  background-repeat: no-repeat;
+  background-image: url(https://w.wallhaven.cc/full/8o/wallhaven-8o2zd1.jpg);
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.637);
 }
 
 .header h1 {
@@ -14,6 +14,7 @@ body {
   font-weight: 300;
   display: flex;
   justify-content: center;
+  padding-right: 15px;
 }
 
 .navbar ul {
@@ -27,6 +28,9 @@ body {
   display: inline-block;
   margin-left: auto;
   margin-right: 20px;
+  background-color: rgb(40, 42, 54);
+  border-radius: 15px;
+
 }
 
 .navbar li a {
@@ -39,23 +43,29 @@ body {
   padding-right: 15px;
   padding-top: 8px;
   padding-bottom: 8px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0);
 }
 
 .navbar li a:hover {
-  background-color: rgba(213, 213, 213, 0.3);
+  background-color: rgba(68, 71, 90);
   border-radius: 15px;
   padding-left: 15px;
   padding-right: 15px;
   padding-top: 8px;
   padding-bottom: 8px;
   transition: 100ms;
+  border-color: rgba(255, 121, 198);
+  border-style: solid;
 }
 
 .clock {
-  font-family: fira sans;
-  font-size: 85px;
+  font-family: Fira Sans;
+  font-size: 110px;
   text-align: center;
   color: white;
+  border-radius: 25px;
+
 }
 
 .footer {
@@ -64,4 +74,74 @@ body {
   background-color: rgb(219, 219, 219);
   border: solid 2px black;
   padding: 2px;
+}
+
+.ampm {
+  font-size: 55px;
+  font-family: fira sans;
+  color: white;
+}
+
+.search-bar {
+  text-align: center;
+  padding-bottom: 20px;
+  padding-top: 40px;
+
+}
+
+#search-input {
+  font-family: roboto condensed;
+  font-size: 30px;
+  background-color: rgba(40, 42, 54);
+  border-style: none;
+  color: white;
+  border-radius: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  width: 400px;
+  border-style: solid;
+  border-color: rgba(255, 228, 196, 0);
+  border-width: 5px;
+  
+
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.342);
+  font-size: 25px;
+}
+
+input::placeholder:hover {
+  color: white;
+}
+
+#search-button {
+  font-size: 30px;
+  border-radius: 260px;
+  background-color: rgba(40, 42, 54, 0);
+  color: white;
+  border-radius: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-style: solid;
+}
+
+#search-input:hover,
+#search-button:hover {
+  transition: 100ms;
+  border-color: rgba(255, 121, 198);
+  border-style: solid;
+  background-color: rgb(68, 71, 90);
+  border-width: 5px;
+}
+
+#weather-text {
+  color: white;
+  text-align: center;
+  font-family: fira sans;
+
 }

@@ -8,60 +8,70 @@
     <script src="https://kit.fontawesome.com/22c8070d6c.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&family=Fira+Sans:wght@400;700&family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&family=Rajdhani:wght@300&family=Roboto+Condensed:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
 </head>
 
 <body onload="startTime()">
-    <div class="header">
-        <h1></h1>
-    </div>
-    <div class="clock">
-        <div id="clock">
-            <script>
-                function startTime() {
-                    const today = new Date();
-                    let h = today.getHours();
-                    let m = today.getMinutes();
-                    let s = today.getSeconds();
-                    let ampm = h >= 12 ? 'PM' : 'AM';
+    <div>
+        <div class="clock">
+            <div id="clock">
+                <script>
+                    function startTime() {
+                        const today = new Date();
+                        let h = today.getHours();
+                        let m = today.getMinutes();
+                        let s = today.getSeconds();
+                        let ampm = h >= 12 ? 'pm' : 'am';
 
-                    // Convert to 12-hour format
-                    if (h > 12) {
-                        h -= 12;
-                    } else if (h === 0) {
-                        h = 12; // Handle midnight (12:00 AM)
+                        // Convert to 12-hour format
+                        if (h > 12) {
+                            h -= 12;
+                        } else if (h === 0) {
+                            h = 12; // Handle midnight (12:00 AM)
+                        }
+
+                        m = checkTime(m);
+                        s = checkTime(s);
+
+                        document.getElementById('clock').innerHTML = h + ":" + m + " <span class='ampm'>" + ampm + "</span>";
+
+                        setTimeout(startTime, 1000);
                     }
 
-                    m = checkTime(m);
-                    s = checkTime(s);
+                    function checkTime(i) {
+                        if (i < 10) { i = "0" + i };
+                        return i;
+                    }
 
-                    document.getElementById('clock').innerHTML = h + ":" + m + " ";
-                    setTimeout(startTime, 1000);
-                }
-
-                function checkTime(i) {
-                    if (i < 10) { i = "0" + i };
-                    return i;
-                }
-
-                startTime(); // Start the clock
-            </script>
+                    startTime(); // Start the clock
+                </script>
+            </div>
         </div>
-        <div class="navbar">
-            <ul>
-                <li><a href="https://mail.google.com/mail/u/1/#inbox"><i class="fa-solid fa-inbox"></i> Gmail</a></li>
-                <li><a href="https://my.pdx.edu/"><i class="fa-solid fa-graduation-cap"></i> School</a></li>
-                <li><a href="https://www.youtube.com"><i class="fa-brands fa-youtube"></i> Youtube</a></li>
-                <li><a href="https://open.spotify.com"><i class="fa-brands fa-spotify"></i> Spotify</a></li>
-                <li><a href="https://www.github.com"><i class="fa-brands fa-github-alt"></i> Github</a></li>
-            </ul>
-        </div>
-
-        <!---div class="footer">
-            <p>
-                insert weather api here
+        <div>
+            <p id="weather-text">
+                <i class="fa-solid fa-cloud"></i>      Cloudy, 75° - Portland OR
             </p>
-        </div> -->
+        </div>
+        <div>
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Search...">
+                <!-- button id="search-button"><i class="fa-solid fa-search"></i></button> -->
+            </div>
+
+        </div>
+        <div>
+            <div class="navbar">
+                <ul>
+                    <li><a href="https://mail.google.com/mail/u/1/#inbox"><i class="fa-solid fa-inbox"></i></a>
+                    </li>
+                    <li><a href="https://my.pdx.edu/"><i class="fa-solid fa-graduation-cap"></i></a></li>
+                    <li><a href="https://www.youtube.com"><i class="fa-brands fa-youtube"></i></a></li>
+                    <li><a href="https://chat.openai.com/"><i class="fa-solid fa-comments"></i></a></li>
+                    <li><a href="https://www.github.com"><i class="fa-brands fa-github-alt"></i></a></li>
+                </ul>
+            </div>
+        </div>
+
 </body>
 
 </html>
