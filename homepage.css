@@ -30,7 +30,6 @@ body {
   margin-right: 20px;
   background-color: rgb(40, 42, 54);
   border-radius: 15px;
-
 }
 
 .navbar li a {
@@ -55,7 +54,7 @@ body {
   padding-top: 8px;
   padding-bottom: 8px;
   transition: 100ms;
-  border-color: rgba(255, 121, 198);
+  border-color: rgba(124, 124, 124, 0.473);
   border-style: solid;
 }
 
@@ -133,7 +132,7 @@ input::placeholder:hover {
 #search-input:hover,
 #search-button:hover {
   transition: 100ms;
-  border-color: rgba(255, 121, 198);
+  border-color: rgba(129, 129, 129, 0.329);
   border-style: solid;
   background-color: rgb(68, 71, 90);
   border-width: 5px;
