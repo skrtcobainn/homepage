@@ -3,7 +3,7 @@ body {
   justify-content: center;
   height: 100vh;
   margin: 0;
-  padding-top: 200px;
+  padding-top: 150px;
   background-color: hsl(231, 15%, 12%);
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -100,6 +100,7 @@ body {
   border-style: none;
   color: white;
   border-radius: 15px;
+  padding-top: 5px;
   padding-left: 15px;
   padding-right: 15px;
   padding-bottom: 8px;
@@ -156,9 +157,8 @@ input::placeholder:hover {
 }
 
 #quote {
-  background-color: rgba(128, 128, 128, 0.068);
   border-radius: 15px;
-  padding: 20px;
+  padding-top: 100px;
 }
 
 .weathercontainer {

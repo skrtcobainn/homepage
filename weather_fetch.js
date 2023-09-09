@@ -11,9 +11,13 @@ fetch(apiUrl)
         const location = data.location.name;
         const tempFahrenheit = data.current.temp_f;
         const conditionText = data.current.condition.text;
+        const conditionIcon = data.current.condition.icon;
 
         const outputString = `<div class ="weathercontainer"> 
-        ${location}, ${conditionText}, ${tempFahrenheit}°</div>`;
+        ${location}, 
+        ${conditionText}, 
+        ${tempFahrenheit}°
+        </div>`;
 
         // Set the innerHTML of a specific element with the data
         document.getElementById('weatherInfo').innerHTML = outputString;
